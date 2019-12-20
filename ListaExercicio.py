@@ -2,7 +2,7 @@ import math
 import random
 from builtins import print
 
-from pygame import mixer
+# from pygame import mixer
 
 linha = '-' * 50
 titulo = '\033[1;34;40mLista de Exercicios\033[m'
@@ -56,6 +56,8 @@ print('19- Faça um Programa que verifique se uma letra digitada é vogal ou con
 print()
 print(
     '20- Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.')
+print()
+print("21- Faça um Programa que leia três números e mostre o maior deles")
 print()
 print('\033[1;32;0m0) Para sair do programa \033[m')
 print()
@@ -404,6 +406,35 @@ while escolha != 0:
         elif valor3 < valor2:
             print(valor3)
 
+    elif escolha == 21:
+        numero1 = int(input("Digite o 1 número: "))
+        numero2 = int(input("Digite o 2 número: "))
+        numero3 = int(input("Digite o 3 número: "))
+
+        if numero1 > numero2 >= numero3:
+            numero3 = numero2
+            numero3 = numero1
+            print("O maior número é: {}".format(numero3))
+        elif numero1 > numero2 <= numero3:
+            numero3 = numero1
+            numero3 = numero2
+            print("O maior número é: {}".format(numero3))
+        elif numero2 > numero3 >= numero1:
+            numero1 = numero3
+            numero1 = numero2
+            print("O maior número é: {}".format(numero1))
+        elif numero2 > numero3 <= numero1:
+            numero1 = numero3
+            numero1 = numero2
+            print("O maior número é: {}".format(numero1))
+        elif numero3 > numero1 >= numero2:
+            numero2 = numero1
+            numero2 = numero3
+            print("O maior número é: {}".format(numero2))
+        elif numero3 > numero1 <= numero2:
+            numero2 = numero1
+            numero2 = numero3
+            print("O maior número é: {}".format(numero2))
 
         print('-' * 59)
         escolha = int(input('\033[1;31;0mEscolha outro exercício, ou aperte 0 para sair do programa: \033[m'))
