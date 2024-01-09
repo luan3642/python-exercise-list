@@ -2,7 +2,7 @@ import math
 import random
 from builtins import print
 
-# from pygame import mixer
+# from pygame import mixerss
 
 linha = '-' * 50
 titulo = '\033[1;34;40mLista de Exercicios\033[m'
